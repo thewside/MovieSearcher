@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+$backgroundColor: rgb(6, 9, 19);
+$fontColorInput: rgb(236, 234, 234);
+$fontSizeInput: 22px;
+$fontColorPlaceholder: rgba(231, 231, 231, 0.185);
+$fontColor: rgb(163, 161, 161);
+$buttonHoverColor: rgb(16, 23, 44);
+
+.search-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    form {
+        display: flex;
+        height: 60px;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 1px 1px 4px 0px rgb(0, 0, 0);
+    }
+}
+
+.search-input {
+    color: $fontColorInput;
+    font-size: $fontSizeInput;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    background-color: $backgroundColor;
+    border-right: 1px solid rgba(63, 57, 57, 0.082);
+    box-shadow: 1px 0 8px -3px rgb(0, 0, 0);
+    z-index: 1;
+    padding: 0px 0px 0px 5px;
+    width: 185px;
+    transition: width 0.5s;
+
+    &:focus {
+        border-radius: 5px 0px 0px 5px;
+        width: 250px;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $fontColorPlaceholder;
+        font-size: 25px;
+        user-select: none;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    &:placeholder-shown+.search-input-button {
+        pointer-events: none;
+    }
+
+    &:not(:placeholder-shown) {
+        width: 230px;
+    }
+
+    &[role="search"] {
+        padding-left: 10px;
+    }
+}
+
+.search-input-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: $fontColor;
+    border-radius: 0px 5px 5px 0px;
+    background-color: $backgroundColor;
+    z-index: 0;
+    width: 40px;
+    padding: 2px;
+
+    &:hover {
+        background-color: $buttonHoverColor;
+        box-shadow: inset 1px 0 8px -3px black;
+    }
+}

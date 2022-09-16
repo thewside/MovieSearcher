@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { getURLParams } from "../utils/getUrlParams";
-import './Search.css'
+import './Search.scss'
 
 const apiKey = process.env.REACT_APP_API_KEY;
 export const SearchComponent = ({refInput, setReceivedData, setThisUrl}) => {
@@ -56,16 +56,18 @@ export const SearchComponent = ({refInput, setReceivedData, setThisUrl}) => {
     
     return (
         <div className="search-container">
+            
                 <form 
                 // onSubmit={e => submit(e)}
                 >
+                    {/* <label for="phone">Найти</label> */}
                     <input
                         className="search-input"
                         ref={refInput}
                         type="text"
                         role="search"
                         name="title"
-                        placeholder="Найти"
+                        placeholder="Введите запрос"
                     >
                     </input>
                     <input
