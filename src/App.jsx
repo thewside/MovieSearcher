@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { Header } from './components/head/Header';
 import { SearchComponent } from './components/search/Search';
-import { Card } from './components/card/Card.jsx';
 import { getURLParams } from './components/utils/getUrlParams';
 import template from './template.json'
 import list from './list.json'
@@ -68,7 +67,6 @@ export const App = () => {
                 setReceivedData={setReceivedData}
                 // setThisUrl={setThisUrl}
             />
-            <Card></Card>
         </div>
     )
 }
