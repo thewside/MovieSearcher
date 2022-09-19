@@ -1,11 +1,46 @@
-.card-container {
+.cards-container {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.cards-collection {
     display: flex;
     justify-content: center;
-    div {
-        width: 100px;
-        height: 100px;
-        img {
-            width: inherit;
-        }
+    transform: translateX(0px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+.card {
+    user-select: none;
+    overflow: hidden;
+    margin: 0 5px 0 5px;
+    min-width: 200px;
+    width: 200px;
+    min-height: 300px;
+    background-color: rgb(50, 59, 35);
+}
+.card-main {
+    user-select: none;
+    margin: 0 10px 0 10px;
+    min-width: 300px;
+    width: 300px;
+    min-height: 400px;
+    background-color: rgb(30, 31, 30);
+    img {
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+}    
+.card-image {
+    img {
+        pointer-events: none;
+        width: 100%;
+        height: 300px;
     }
 }
